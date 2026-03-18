@@ -1,0 +1,3 @@
+Devoluções KG Mês =
+
+    IF(ISBLANK(SUM('Devoluções Mês (DQ)'[D1_QUANT])),0, SUM('Devoluções Mês (DQ)'[D1_QUANT]))

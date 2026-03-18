@@ -1,0 +1,3 @@
+Preço Médio de Vendas =
+
+DIVIDE(SUM('Faturamento Mês SD2010 (DQ)'[D2_VRLIQ]),SUM('Faturamento Mês SD2010 (DQ)'[D2_QUANT]),0)

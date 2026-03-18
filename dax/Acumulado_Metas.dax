@@ -1,0 +1,3 @@
+Acumulado Metas =
+
+IF(ISBLANK(SUM('Metas SCT010 (DQ)'[CT_VALOR])), 0, SUM('Metas SCT010 (DQ)'[CT_VALOR]))

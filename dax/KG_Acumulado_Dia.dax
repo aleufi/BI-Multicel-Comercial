@@ -1,0 +1,13 @@
+KG Acumulado Dia =
+
+
+VAR acumulado = 
+    SUM('Faturamento Dia SD2010 (DQ)'[D2_QUANT])
+
+VAR devolucoes =
+    SUM('Devoluções Dia (DQ)'[D1_QUANT])
+
+VAR totalMes = acumulado - devolucoes
+
+RETURN
+    IF(totalMes <= 0, 0, totalMes)

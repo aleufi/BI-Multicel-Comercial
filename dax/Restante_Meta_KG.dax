@@ -1,0 +1,7 @@
+Restante Meta KG =
+
+IF(ISBLANK([KG Acumulado Metas] - [Faturamento + Carteira KG]), 
+    0, 
+    IF([KG Acumulado Metas] - [Faturamento + Carteira KG] < 0,
+    ([KG Acumulado Metas] - [Faturamento + Carteira KG]) * -1,
+    [KG Acumulado Metas] - [Faturamento + Carteira KG]))

@@ -1,0 +1,3 @@
+Progresso Meta Fat+Cart =
+
+DIVIDE([Faturamento + Carteira], [Acumulado Metas], 0) * 100

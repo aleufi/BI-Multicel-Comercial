@@ -1,0 +1,2 @@
+Valor DiasMínimo =
+SELECTEDVALUE('Parâmetro Dias Estoque Não Movimentado'[DiasMínimo], 0)

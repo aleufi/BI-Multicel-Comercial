@@ -1,0 +1,7 @@
+Título do Cartão Meta KG =
+
+IF(
+    [KG Acumulado Metas] - [Faturamento + Carteira KG] < 0,
+    "Excedente Meta KG",
+    "Meta a Cumprir KG"
+)

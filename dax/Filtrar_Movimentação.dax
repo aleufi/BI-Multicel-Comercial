@@ -1,0 +1,3 @@
+Filtrar Movimentação =
+
+IF(SUM('Saldos (DQ)'[DIAS_ULTMOV]) >= SELECTEDVALUE('Parâmetro Dias Estoque Não Movimentado'[DiasMínimo]), 1, 0)

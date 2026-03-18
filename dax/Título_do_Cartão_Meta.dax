@@ -1,0 +1,7 @@
+Título do Cartão Meta =
+
+IF(
+    [Acumulado Metas] - [Faturamento + Carteira] < 0,
+    "Excedente Meta",
+    "Meta a Cumprir"
+)

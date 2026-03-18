@@ -1,0 +1,3 @@
+﻿% de Vendas =
+
+    DIVIDE([Acumulado Mês], SUM('Faturamento Total SD2010 (DQ)'[D2_VRLIQ]) - SUM('Devoluções Total (DQ)'[D1_VRLIQ]), 0)

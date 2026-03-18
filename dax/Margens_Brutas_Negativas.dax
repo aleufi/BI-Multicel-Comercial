@@ -1,0 +1,29 @@
+Margens Brutas Negativas =
+
+VAR Escolha = SELECTEDVALUE('Tipo de Exibição Margens'[Valor])
+
+VAR quantidade =
+
+    SWITCH(
+        Escolha,
+        0, 
+        SUMX(
+            'Faturamento Mês SD2010 (DQ)',
+            IF(
+                ('Faturamento Mês SD2010 (DQ)'[D2_VRLIQ] - 'Faturamento Mês SD2010 (DQ)'[D2_CUSTMP] - 'Faturamento Mês SD2010 (DQ)'[D2_CUSTGGF] < 0), 
+                1, 
+                0
+            )
+        ),
+
+        1, SUMX(
+            'Faturamento Mês SD2010 (DQ)',
+            IF(
+                ('Faturamento Mês SD2010 (DQ)'[D2_VRLIQ] - 'Faturamento Mês SD2010 (DQ)'[D2_CUSTMP] - 'Faturamento Mês SD2010 (DQ)'[D2_CUSTGGF] < 0), 
+                1, 
+                0
+            )
+        )
+    )
+
+RETURN IF(ISBLANK(quantidade), 0, quantidade)

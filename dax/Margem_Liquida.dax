@@ -1,0 +1,17 @@
+Margem Liquida =
+
+
+VAR Escolha = SELECTEDVALUE('Tipo de Exibição Margens'[Valor])
+
+RETURN
+    SWITCH(
+        Escolha,
+        0, 'Medidas'[Acumulado Mês] - SUM('Faturamento Mês SD2010 (DQ)'[D2_CUSTMP]) - SUM('Faturamento Mês SD2010 (DQ)'[D2_CUSTGGF]) - SUM('Faturamento Mês SD2010 (DQ)'[D2_CUSTOH]),
+        
+        1, DIVIDE(
+            (
+                'Medidas'[Acumulado Mês] - SUM('Faturamento Mês SD2010 (DQ)'[D2_CUSTMP]) - SUM('Faturamento Mês SD2010 (DQ)'[D2_CUSTGGF]) - SUM('Faturamento Mês SD2010 (DQ)'[D2_CUSTOH])
+            )
+            ,[Acumulado Mês]
+        ) * 100
+    )

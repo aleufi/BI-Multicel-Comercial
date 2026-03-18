@@ -1,0 +1,3 @@
+Progresso Meta KG =
+
+    ROUND(DIVIDE([KG Acumulado Mês], [KG Acumulado Metas], 0), 2)

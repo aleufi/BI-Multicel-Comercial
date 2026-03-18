@@ -1,0 +1,3 @@
+Devoluções Dia =
+
+IF(ISBLANK(SUM('Devoluções Dia (DQ)'[D1_VRLIQ])), 0, SUM('Devoluções Dia (DQ)'[D1_VRLIQ]))

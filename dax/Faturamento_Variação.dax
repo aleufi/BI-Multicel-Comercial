@@ -1,0 +1,8 @@
+Faturamento Variação =
+
+
+    IF(
+    [Faturamento A] = 0 || [Faturamento B] = 0, 
+    BLANK(), 
+    ([Faturamento B] - [Faturamento A]) / [Faturamento A]
+)

@@ -1,0 +1,7 @@
+Restante Meta =
+
+IF(ISBLANK([Acumulado Metas] - [Faturamento + Carteira]), 
+    0, 
+    IF([Acumulado Metas] - [Faturamento + Carteira] < 0,
+    ([Acumulado Metas] - [Faturamento + Carteira]) * -1,
+    [Acumulado Metas] - [Faturamento + Carteira]))

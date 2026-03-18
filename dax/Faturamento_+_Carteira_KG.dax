@@ -1,0 +1,4 @@
+Faturamento + Carteira KG =
+
+
+IF(ISBLANK([Carteira Mês KG] + [KG Acumulado Mês]), 0, [Carteira Mês KG] + [KG Acumulado Mês])

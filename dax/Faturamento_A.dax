@@ -1,0 +1,31 @@
+Faturamento A =
+
+
+VAR Escolha = SELECTEDVALUE('Tipo de Exibição Evolução'[Valor])
+
+RETURN
+    SWITCH(
+        Escolha,
+        
+        0, CALCULATE(
+
+            SUM('Faturamento e Devoluções Histórico (DQ)'[D2_VRLIQ]) - SUM('Devoluções Dia (DQ)'[D1_VRLIQ]),
+            
+            FILTER(
+                'Faturamento e Devoluções Histórico (DQ)',
+                'Faturamento e Devoluções Histórico (DQ)'[D2_EMISSAO] >= MIN('Data A Evolução'[D2_EMISSAO]) &&
+                'Faturamento e Devoluções Histórico (DQ)'[D2_EMISSAO] <= MAX('Data A Evolução'[D2_EMISSAO])
+            )
+        ),
+        
+        1, CALCULATE(
+
+            SUM('Faturamento e Devoluções Histórico (DQ)'[D2_QUANT]) - SUM('Devoluções Dia (DQ)'[D1_QUANT]),
+            
+            FILTER(
+                'Faturamento e Devoluções Histórico (DQ)',
+                'Faturamento e Devoluções Histórico (DQ)'[D2_EMISSAO] >= MIN('Data A Evolução'[D2_EMISSAO]) &&
+                'Faturamento e Devoluções Histórico (DQ)'[D2_EMISSAO] <= MAX('Data A Evolução'[D2_EMISSAO])
+            )
+        )
+    )

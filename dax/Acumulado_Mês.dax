@@ -1,0 +1,16 @@
+Acumulado Mês =
+
+
+VAR acumulado = 
+    SUM('Faturamento Mês SD2010 (DQ)'[D2_VRLIQ])
+
+VAR devolucoes =
+    SUM('Devoluções Mês (DQ)'[D1_VRLIQ])
+
+VAR totalMes = acumulado - devolucoes
+
+RETURN
+   IF(
+        ISBLANK(totalMes), 0,
+         IF(totalMes < 0, 0, totalMes)
+    )

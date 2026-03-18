@@ -1,0 +1,13 @@
+Acumulado Dia =
+
+
+VAR acumulado = 
+    SUM('Faturamento Dia SD2010 (DQ)'[D2_VRLIQ])
+
+VAR devolucoes =
+    SUM('Devoluções Dia (DQ)'[D1_VRLIQ])
+
+VAR totalDia = acumulado - devolucoes
+
+RETURN
+   IF(ISBLANK(totalDia), 0, totalDia)

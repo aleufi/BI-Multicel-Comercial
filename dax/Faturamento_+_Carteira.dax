@@ -1,0 +1,7 @@
+Faturamento + Carteira =
+
+
+VAR CarteiraMes =
+    SUM('Carteira de Pedidos Mês SC6010 (DQ)'[VRLIQ])
+
+RETURN IF(ISBLANK(CarteiraMes + [Acumulado Mês]), 0, CarteiraMes + [Acumulado Mês])

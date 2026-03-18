@@ -1,0 +1,16 @@
+Margem de Contribuição =
+
+
+VAR Escolha = SELECTEDVALUE('Tipo de Exibição Margens'[Valor])
+
+RETURN
+    SWITCH(
+        Escolha,
+        0, 'Medidas'[Acumulado Mês] - SUM('Faturamento Mês SD2010 (DQ)'[D2_CUSTMP]),
+        
+        1, DIVIDE(
+            ('Medidas'[Acumulado Mês] - SUM('Faturamento Mês SD2010 (DQ)'[D2_CUSTMP])
+            )
+            ,[Acumulado Mês]
+        ) * 100
+    )
