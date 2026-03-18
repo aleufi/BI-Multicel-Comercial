@@ -1,4 +1,4 @@
-# BI Multicel – Dashboard Comercial & Financeiro
+# BI Multicel – Dashboard Comercial
 Projeto de Business Intelligence desenvolvido para a Multicel Pigmentos, com foco na análise comercial, faturamento, metas, carteira de pedidos, margens e estoques.  
 Autor: **Alyfher Cambarotto de Souza**
 
