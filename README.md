@@ -147,11 +147,6 @@ Todas as medidas estão documentadas na pasta **/dax**.
 
 ---
 
-## 🧾 Documentação completa
-Os arquivos originais estão disponíveis na pasta **/docs**:
-
----
-
 ## 👨‍💻 Sobre o Autor
 **Alyfher Cambarotto de Souza**  
 Analista de Suporte / Desenvolvedor BI  
